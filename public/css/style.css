@@ -1,9 +1,105 @@
 :root {
-  --primary: #d6dacc;
-  --secondary: #a2ae9c;
-  --tertiary: #78857d;
+  --background: rgb(228, 223, 236);
+  --navbarBackground: rgb(215, 158, 162);
+  --text: rgb(22, 0, 38);
+  --border: #470b0b;
   --light-dark: #68666f;
   --dark: #302e38;
   --border-radius: 0.2rem;
 }
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0px;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+table {
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 450%;
+  color: rgb(71, 0, 0);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/public/media/left_column_books.png");
+
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  background-color: var(--navbarBackground);
+  border-bottom: 2px solid var(--border);
+}
+
+.navbar a {
+  margin: 10px;
+}
+
+.column {
+  flex: 50%;
+  padding: 20px;
+}
+
+.left-column {
+  line-height: 2;
+  background-size: contain;
+  background-position: center;
+}
+
+.form-row {
+  line-height: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 3;
+}
+
+.question {
+  text-align: center;
+  font-size: 200%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: red;
+  background-color: rgb(38, 6, 0);
+}
+
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+footer {
+  margin-top: 130px;
+  text-align: center;
+}
+
+
+
 
