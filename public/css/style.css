@@ -2,7 +2,7 @@
   --background: rgb(228, 223, 236);
   --navbarBackground: rgb(215, 158, 162);
   --text: rgb(22, 0, 38);
-  --border: #470b0b;
+  --border: 2px solid #470b0b;
   --light-dark: #68666f;
   --dark: #302e38;
   --border-radius: 0.2rem;
@@ -11,12 +11,11 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
-  background-color: var(--background);
   color: var(--text);
-}
-
-table {
-  margin: 0 auto;
+  background-image: url("/public/media/left_column_books.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .title {
@@ -31,9 +30,7 @@ table {
   display: flex;
   text-align: center;
   justify-content: center;
-  align-items: center;
-  background-image: url("/public/media/left_column_books.png");
-
+  align-items: flex-start;
 }
 
 .navbar {
@@ -43,7 +40,7 @@ table {
   align-items: center;
   padding-bottom: 10px;
   background-color: var(--navbarBackground);
-  border-bottom: 2px solid var(--border);
+  border-bottom: var(--border);
 }
 
 .navbar a {
@@ -56,9 +53,24 @@ table {
 }
 
 .left-column {
+  flex: 1;
+  text-align: center;
   line-height: 2;
   background-size: contain;
   background-position: center;
+  border-right: var(--border);
+}
+
+.right-column {
+  flex: 1;
+  text-align: center;
+  }
+
+h6 {
+  margin-top: 0;
+}
+h2 {
+  margin-bottom: 0;
 }
 
 .form-row {
@@ -88,6 +100,19 @@ ul li {
   background-color: rgb(38, 6, 0);
 }
 
+  .add-conversation-button {
+    padding: 10px 20px;
+    background-color: #1b3d5a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .add-conversation-button:hover {
+    background-color: #3071a9;
+  }
 
 .form-row {
   display: flex;
@@ -96,7 +121,7 @@ ul li {
 }
 
 footer {
-  margin-top: 130px;
+  margin-top: 150px;
   text-align: center;
 }
 
