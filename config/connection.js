@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+
 require('dotenv').config();
 
 // Sequelize "stands between" you and your db
@@ -9,13 +10,15 @@ const sequelize = process.env.JAWSDB_URL
   : new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
-    process.env.DB_PASSWORD, {
+    process.env.DB_PASSWORD,
+
+    {
       host: 'localhost',
       dialect: 'mysql',
       dialectOptions: {
-      decimalNumbers: true,
+        decimalNumbers: true,
       },
     });
 
-module.exports = sequelize; 
+module.exports = sequelize;
 
