@@ -3,12 +3,12 @@
 
 <head>
   <title>BookShare</title>
-  <link rel="stylesheet" type="text/css" href="/public/css/new-post-style.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/edit-post-style.css">
 </head>
 
 
 <div class="form-container">
-  <h2>New Convo</h2>
+  <h2>Edit Convo</h2>
   <form id="newPostForm">
     <!-- Form fields for Book Title, Attention Getter, etc. -->
     <label for="bookTitle">Book Title:</label>
@@ -17,8 +17,9 @@
     <label for="attentionGetter">Attention Getter:</label>
     <textarea id="attentionGetter" name="attentionGetter" required></textarea>
     <br>
-    <input type="submit" value="Start Convo">
+    <input type="submit" value="Edit Convo">
+    <input type="button" value="Delete Convo" class="delete-button">
   </form>
 </div>
 
-<script src="/js/new.js"></script>
+<script src="/js/edit.js"></script>

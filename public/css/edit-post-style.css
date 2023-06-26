@@ -73,3 +73,23 @@ br {
      margin-top: 8px;
      margin-bottom: 8px;
 }
+
+.delete-button {
+     padding: 8px 16px;
+     background-color: var(--button);
+     color: #fff;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 14px;
+     margin: 5px;
+   }
+   
+   .delete-button:hover {
+     background-color: #3071a9;
+   }
+   
+   .delete-button:focus {
+     outline: none;
+   }
+   
