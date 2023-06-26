@@ -3,7 +3,7 @@ const Post = require('./Post');
 const Comment = require('./Comment');
 const Book = require('./Book');
 
-// note : setup relationship 
+// note : setup relationship  and 
 
 module.exports = {
   User,

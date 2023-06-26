@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-// Establish the database connection and sync sequelize models
+// Establish the database connection and sync sequelize models 
 sequelize
   .authenticate()
   .then(() => {
