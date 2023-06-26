@@ -1,15 +1,17 @@
-<h2>New Convo</h2>
+<link rel="stylesheet" type="text/css" href="/public/css/new-post-style.css">
+
+<div class="form-container">
+  <h2>New Convo</h2>
   <form id="newPostForm">
     <!-- Form fields for Book Title, Attention Getter, etc. -->
     <label for="bookTitle">Book Title:</label>
     <input type="text" id="bookTitle" name="bookTitle" required>
     <br>
     <label for="attentionGetter">Attention Getter:</label>
-    <input type="text" id="attentionGetter" name="attentionGetter" required>
+    <textarea id="attentionGetter" name="attentionGetter" required></textarea>
     <br>
-    <!-- Other form fields -->
-    <!-- Submit button to start the conversation -->
     <input type="submit" value="Start Convo">
   </form>
+</div>
 
 <script src="/js/new.js"></script>

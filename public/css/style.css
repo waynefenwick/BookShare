@@ -3,7 +3,7 @@
   --navbarBackground: linear-gradient(to right, rgb(158, 160, 215), rgb(255, 170, 170), rgb(158, 160, 215));
   --text: rgb(22, 0, 38);
   --border: 2px solid #470b0b;
-  --light-dark: #68666f;
+  --button: #141846;
   --dark: #302e38;
   --border-radius: 0.2rem;
 }
@@ -62,7 +62,8 @@ body {
 
 .right-column {
   flex: 1;
-
+  line-height: 2;
+  text-align: center;
   }
 
 h6 {
@@ -105,7 +106,7 @@ ul li {
 
 .add-conversation-button {
   padding: 10px 20px;
-  background-color: #141846;
+  background-color: var(--button);
   color: white;
   border: none;
   border-radius: 4px;
