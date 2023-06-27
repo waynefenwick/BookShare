@@ -8,16 +8,18 @@
 
 
 <div class="form-container">
-  <h2>Edit Convo</h2>
+  <h2>Edit a Convo</h2>
   <form id="newPostForm">
     <!-- Form fields for Book Title, Attention Getter, etc. -->
-    <label for="bookTitle">Book Title:</label>
-    <input type="text" id="bookTitle" name="bookTitle" required>
+    <label for="bookTitle">Select a Book</label>
+    <select id="bookTitle" name="bookTitle" required onchange="displayAttentionGetter()">
+      <option value="">No Books Available</option>
+    </select>
     <br>
-    <label for="attentionGetter">Attention Getter:</label>
+    <label for="attentionGetter">Make Convo Changes</label>
     <textarea id="attentionGetter" name="attentionGetter" required></textarea>
     <br>
-    <input type="submit" value="Edit Convo">
+    <input type="submit" value="Update Convo" class="update-button">
     <input type="button" value="Delete Convo" class="delete-button">
   </form>
 </div>
