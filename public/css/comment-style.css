@@ -8,13 +8,35 @@
      --border-radius: 0.2rem;
 }
 
-.form-container {
-     border: var(--outlineBorder);
-     padding: 20px;
-     margin: 20px;
+.container {
+     display: flex;
 }
 
-.form-container h2 {
+.column {
+     flex: 1;
+     padding: 10px;
+}
+
+.column:last-child {
+     border-left: 1px solid #ccc;
+}
+
+
+.formContainer {
+     border: var(--outlineBorder);
+     padding: 10px;
+     margin: 10px;
+}
+#selectedBookTitle {
+     margin-top: 15px;
+}
+.bookThoughtsContainer {
+     border: var(--outlineBorder);
+     padding: 10px;
+     margin: 10px;
+}
+
+.formContainer h2 {
      border-bottom: 1px solid #ccc;
      padding-bottom: 8px;
      margin-bottom: 16px;
@@ -69,6 +91,12 @@ br {
      margin-top: 8px;
      margin-bottom: 8px;
 }
+
+#attentionGetter {
+     height: auto;
+     resize: vertical;
+}
+
 
 .addConvo-button {
      padding: 10px 20px;
