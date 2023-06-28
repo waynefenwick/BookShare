@@ -2,9 +2,10 @@
   --background: rgb(228, 223, 236);
   --navbarBackground: linear-gradient(to right, rgb(158, 160, 215), rgb(255, 170, 170), rgb(158, 160, 215));
   --text: rgb(22, 0, 38);
-  --border: 2px solid #470b0b;
+  --border: 1px solid #470b0b;
   --button: #141846;
-  --dark: #302e38;
+  --buttonHover: #3071a9;
+  --outlineBorder: 2px solid #280606;
   --border-radius: 0.2rem;
 }
 
@@ -26,6 +27,7 @@ body {
   margin-top: 0px;
   margin-bottom: 10px;
 }
+
 .container {
   display: flex;
   flex-direction: row;
@@ -54,12 +56,22 @@ body {
   flex: 1;
   line-height: 2;
   border-right: var(--border);
-  text-align: center;
   flex-basis: 30%;
   max-width: 30%;
 }
 
+.question {
+  display: flex;
+  flex-direction: column;
+  font-size: 200%;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
 .right-column {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   line-height: 2;
   text-align: center;
@@ -67,10 +79,10 @@ body {
   max-width: 70%;
 }
 
-
 h6 {
   margin-top: 0;
 }
+
 h2 {
   margin-bottom: 0;
 }
@@ -89,29 +101,14 @@ ul {
   margin-left: 0px;
   padding: 0%;
 }
+
 ul li {
-  display: flex;
-  justify-content: center;
   line-height: 3;
-  text-align: center;
+  margin-left: 65px;
+  text-align: left;
 }
 
-.question {
-  display: flex;
-  flex-direction: column;
-  font-size: 200%;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.button:hover {
-  cursor: pointer;
-  color: red;
-  background-color: rgb(38, 6, 0);
-}
-
-.add-conversation-button {
-  padding: 10px 20px;
+.addToConvoBtn {
   background-color: var(--button);
   color: white;
   border: none;
@@ -120,16 +117,11 @@ ul li {
   cursor: pointer;
   }
 
-.add-conversation-button:hover {
-  background-color: #3071a9;
+.addToConvoBtn:hover {
+  background-color: var(--buttonHover);
 }
-
 
 footer {
   margin-top: 150px;
   text-align: center;
 }
-
-
-
-

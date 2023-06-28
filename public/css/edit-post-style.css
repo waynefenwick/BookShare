@@ -4,6 +4,7 @@
      --text: rgb(22, 0, 38);
      --border: 1px solid #470b0b;
      --button: #141846;
+     --buttonHover: #3071a9;
      --outlineBorder: 2px solid #280606;
      --border-radius: 0.2rem;
 }
@@ -47,7 +48,7 @@ textarea {
      border: var(--border);
      border-radius: 4px;
      font-size: 14px;
-     resize: vertical; /* Allow vertical resizing */
+     resize: vertical;
 }
 
 input[type="submit"] {
@@ -84,6 +85,6 @@ br {
 
 .delete-button:hover,
 .update-button:hover {
-     background-color: #3071a9;
+     background-color: var(--buttonHover);
 }
 
