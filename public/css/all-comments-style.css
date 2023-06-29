@@ -10,15 +10,50 @@
 }
 
 .formContainer {
-     border: var(--outlineBorder);
-     padding: 20px;
-     margin: 20px;
+     border: var(--outlineBorder) !important;
+     padding: 20px  !important;
+     margin: 20px  !important;
 }
 
 .formContainer h2 {
-     border-bottom: var(--borderBottom);
+     border-bottom: 1px solid #ccc;
      padding-bottom: 8px;
      margin-bottom: 16px;
+}
+
+.alignRight {
+     margin-right: 20px !important;
+}
+
+.container {
+     display: flex;
+}
+
+.column {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.column span:last-child {
+     margin-left: auto;
+}
+
+
+#selectedBookTitle {
+     margin-top: 15px;
+}
+
+.bookThoughtsContainer {
+     border: var(--outlineBorder);
+     padding: 10px;
+     margin: 10px;
+}
+
+.formContainer {
+     border: 1px solid var(--outlineBorder); /* Adjust the border style and color as needed */
+     padding: 10px;
+     margin: 10px;
 }
 
 #newPostForm {
@@ -61,31 +96,21 @@ input[type="submit"] {
      font-size: 14px;
      margin: 5px;
 }
+
 #bookTitle {
      height: 30px;
      margin-bottom: 10px;
-     width: 300px
 }
 
-br {
-     margin-top: 8px;
-     margin-bottom: 8px;
-}
-
-.deleteBtn,
-.updateBtn {
-     padding: 8px 16px;
+.addToConvoBtn {
      background-color: var(--button);
-     color: #fff;
+     color: white;
      border: none;
      border-radius: 4px;
+     font-size: 16px;
      cursor: pointer;
-     font-size: 14px;
-     margin: 5px;
-}
+     }
 
-.deleteBtn:hover,
-.updateBtn:hover {
+.addToConvoBtn:hover {
      background-color: var(--buttonHover);
 }
-

@@ -6,16 +6,16 @@
      --button: #141846;
      --buttonHover: #3071a9;
      --outlineBorder: 2px solid #280606;
-     --border-radius: 0.2rem;
+     --borderBottom: 1px solid #ccc;
 }
 
-.form-container {
+.formContainer {
      border: var(--outlineBorder);
      padding: 20px;
      margin: 20px;
 }
 
-.form-container h2 {
+.formContainer h2 {
      border-bottom: 1px solid #ccc;
      padding-bottom: 8px;
      margin-bottom: 16px;

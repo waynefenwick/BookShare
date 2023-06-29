@@ -6,7 +6,7 @@
   --button: #141846;
   --buttonHover: #3071a9;
   --outlineBorder: 2px solid #280606;
-  --border-radius: 0.2rem;
+  --borderBottom: 1px solid #ccc;
 }
 
 body {
