@@ -1,7 +1,11 @@
 const express = require('express');
+
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
 const routes = require('./routes');
+
+const routes = require('./controllers');
+
 const sequelize = require('./config/connection');
 
 const app = express();
@@ -20,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-// Establish the database connection and sync sequelize models
+// Establish the database connection and sync sequelize models 
 sequelize
   .authenticate()
   .then(() => {
