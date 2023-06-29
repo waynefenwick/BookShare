@@ -1,13 +1,37 @@
-const User = require('./User');
-const Post = require('./Post');
-const Comment = require('./Comment');
-const Book = require('./Book');
 
-// note : setup relationship  and 
+const Post = require("./Post");
+const User = require("./User");
+const Comment = require("./Comment");
 
-module.exports = {
-  User,
-  Comment,
-  Post,
-  Book
-};
+// create associations between models (User, Post, Comment) by creating references to the other models as foreign keys in each model.
+User.hasMany(Post, {
+    foreignKey: "user_id"
+});
+
+
+Post.belongsTo(User, {
+    foreignKey: "user_id",
+    onDelete: "SET NULL"
+});
+
+
+Comment.belongsTo(User, {
+    foreignKey: "user_id",
+    onDelete: "SET NULL"
+});
+
+Comment.belongsTo(Post, {
+    foreignKey: "post_id",
+    onDelete: "SET NULL"
+});
+
+User.hasMany(Comment, {
+    foreignKey: "user_id",
+    onDelete: "SET NULL"
+});
+
+Post.hasMany(Comment, {
+    foreignKey: "post_id"
+});
+
+module.exports = { User, Post, Comment };
