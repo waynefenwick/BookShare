@@ -1,9 +1,23 @@
 const express = require('express');
+
+const exphbs = require('express-handlebars');
+const hbs = exphbs.create({});
+const routes = require('./routes');
+
 const routes = require('./controllers');
+
 const sequelize = require('./config/connection');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// Set Handlebars as the default template engine.
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+app.use(express.static(path.join(__dirname, 'public')));
+//Correcet file path needs to be added below
+//app.use(require('./controllers/'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
