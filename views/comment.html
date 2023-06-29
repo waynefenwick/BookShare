@@ -6,92 +6,64 @@
   <link rel="stylesheet" type="text/css" href="/public/css/comment-style.css">
 </head>
 
-<div class="container">
-  <div class="column">
-    <div class="formContainer">
-      <h2>Select a Book</h2>
-      <form id="newPostForm">
-        <div id="bookList">
-          <label for="book1"><input type="radio" id="book1" name="bookTitle" value="Book 1"> Becoming a Perfect Coder</label><br>
-          <label for="book2"><input type="radio" id="book2" name="bookTitle" value="Book 2"> Shipping Lanes Around the World</label><br>
-          <label for="book3"><input type="radio" id="book3" name="bookTitle" value="Book 3"> Eat it all!</label><br>
-        </div>
-      </form>
-    </div>
-  </div>
-  <div class="column">
+  <!-- <div class="column">
     <div id="bookThoughtsContainer">
-      <div id="selectedBookFields" style="display: none;">
         <input type="text" id="selectedBookTitle" readonly><br>
         <label for="attentionGetter">What are your thoughts:</label>
         <textarea id="attentionGetter" name="attentionGetter" required></textarea>
 
         <input type="submit" value="Add to Convo" class="addToConvoBtn">
-      </div>
     </div>
   </div>
+</div> -->
+
+
+<div class="formContainer">
+  <article class="card">
+    <div class="card-header flex-row justify-space-between">
+      <h2>{{post.title}}</h2>
+      <div>
+        Posted by {{post.User.username}} on {{format_date post.createdAt}}
+      </div>
+    </div>
+    <div class="card-body">
+      {{post.body}}
+    </div>
+  </article>
+
+  {{#if post.Comments}}
+    <section class="card">
+      <div class="card-header">
+        <h3>Comments</h3>
+      </div>
+
+      <div class="card-body">
+        {{#each post.Comments}}
+          <div>
+            <p>
+              {{body}}
+            </p>
+            <p>
+              &mdash; {{User.username}}, {{format_date createdAt}}
+            </p>
+          </div>
+        {{/each}}
+      </div>
+    </section>
+  {{/if}}
+
+  <form id="new-comment-form" class="card">
+    <div class="card-header">
+      <h3>Add New Comment</h3>
+    </div>
+    <div class="card-body">
+      <input type="hidden" name="post-id" value="{{post.id}}" />
+      <label class="form-label" for="comment-body">Comment</label>
+      <textarea name="comment-body" class="form-input"></textarea>
+      <button type="submit" class="addToConvoBtn">Submit</button>
+    </div>
+  </form>
 </div>
 
-<script>
-const bookList = document.getElementById('bookList');
-const selectedBookFields = document.getElementById('selectedBookFields');
-const selectedBookTitle = document.getElementById('selectedBookTitle');
-const attentionGetter = document.getElementById('attentionGetter');
-const bookThoughtsContainer = document.getElementById('bookThoughtsContainer');
-const bookThoughtsLists = {
-  'book1': document.getElementById('bookThoughtsList1'),
-  'book2': document.getElementById('bookThoughtsList2'),
-  'book3': document.getElementById('bookThoughtsList3')
-};
-
-bookList.addEventListener('change', function(event) {
-  const selectedBook = event.target.value;
-  if (selectedBook) {
-    selectedBookTitle.value = selectedBook;
-    selectedBookFields.style.display = 'block';
-    bookThoughtsContainer.style.display = 'block';
-
-    // Hide all book thoughts
-    for (const bookThoughtsList of Object.values(bookThoughtsLists)) {
-      bookThoughtsList.style.display = 'none';
-    }
-
-    // Show the selected book thoughts
-    const selectedBookThoughts = bookThoughtsLists[selectedBook];
-    selectedBookThoughts.style.display = 'block';
-
-    // Move the selectedBookFields div under the selected book label
-    const selectedBookLabel = event.target.parentElement.querySelector(`label[for="${selectedBook}"]`);
-    selectedBookFields.parentElement.removeChild(selectedBookFields);
-    selectedBookLabel.parentElement.appendChild(selectedBookFields);
-  } else {
-    selectedBookFields.style.display = 'none';
-    bookThoughtsContainer.style.display = 'none';
-  }
-});
-
-document.getElementById('newPostForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  // Get the selected book and attention getter value
-  const selectedBook = selectedBookTitle.value;
-  const thought = attentionGetter.value;
-
-  // Display the thought in the corresponding book thoughts list
-  if (selectedBook && bookThoughtsLists[selectedBook]) {
-    const bookThoughtsList = bookThoughtsLists[selectedBook];
-    const listItem = document.createElement('li');
-    listItem.textContent = thought;
-    bookThoughtsList.appendChild(listItem);
-    bookThoughtsContainer.style.display = 'block';
-  }
-
-  // Reset the form fields
-  selectedBookTitle.value = '';
-  attentionGetter.value = '';
-  selectedBookFields.style.display = 'none';
-});
-</script>
-
-
 <script src="/js/comment.js"></script>
+

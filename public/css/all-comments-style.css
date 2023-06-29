@@ -9,20 +9,36 @@
      --borderBottom: 1px solid #ccc;
 }
 
+.formContainer {
+     border: var(--outlineBorder) !important;
+     padding: 20px  !important;
+     margin: 20px  !important;
+}
+
+.formContainer h2 {
+     border-bottom: 1px solid #ccc;
+     padding-bottom: 8px;
+     margin-bottom: 16px;
+}
+
+.alignRight {
+     margin-right: 20px !important;
+}
+
 .container {
      display: flex;
 }
 
 .column {
-     flex: 1;
-     padding: 10px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
 }
 
-.formContainer {
-     border: var(--outlineBorder);
-     padding: 10px;
-     margin: 10px;
+.column span:last-child {
+     margin-left: auto;
 }
+
 
 #selectedBookTitle {
      margin-top: 15px;
@@ -34,10 +50,10 @@
      margin: 10px;
 }
 
-.formContainer h2 {
-     border-bottom: 1px solid #ccc;
-     padding-bottom: 8px;
-     margin-bottom: 16px;
+.formContainer {
+     border: 1px solid var(--outlineBorder); /* Adjust the border style and color as needed */
+     padding: 10px;
+     margin: 10px;
 }
 
 #newPostForm {
