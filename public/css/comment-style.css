@@ -18,6 +18,12 @@
      padding: 10px;
 }
 
+body {
+     border: none;
+     padding: 10px;
+     margin: 10px;
+}
+
 .formContainer {
      border: var(--outlineBorder);
      padding: 10px;
@@ -61,24 +67,14 @@ input[type="text"] {
      margin-bottom: 20px;
 }
 
-textarea {
+.form-input {
      width: 100%;
      padding: 8px;
      border: var(--border);
      border-radius: 4px;
      font-size: 14px;
      resize: vertical;
-}
-
-input[type="submit"] {
-     padding: 8px 16px;
-     background-color: var(--button);
-     color: #fff;
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
-     font-size: 14px;
-     margin: 5px;
+     height: 100px;
 }
 
 #bookTitle {
@@ -87,12 +83,14 @@ input[type="submit"] {
 }
 
 .addToConvoBtn {
+     padding: 8px 16px;
      background-color: var(--button);
-     color: white;
+     color: #fff;
      border: none;
      border-radius: 4px;
-     font-size: 16px;
      cursor: pointer;
+     font-size: 14px;
+     margin: 5px;
      }
 
 .addToConvoBtn:hover {

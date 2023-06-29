@@ -37,7 +37,7 @@ body {
     justify-content: center;
     height: auto;
 }
-  
+
 .navbar {
     display: flex;
     flex-direction: column;
@@ -46,32 +46,39 @@ body {
     padding-bottom: 10px;
     border-bottom: var(--border);
     background: var(--navbarBackground);
-  }
-  
+}
+
 .navbar a {
     margin: 10px;
-  }
-  
+}
+
+.row {
+    display: flex;
+}
+
 .left-column {
     flex: 1;
     line-height: 2;
     border-right: var(--border);
-    flex-basis: 50%;
-    max-width: 50%;
+    padding-right: 10px; /* Optional: Add padding between columns */
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .right-column {
-    display: flex;
-    flex-direction: column;
     flex: 1;
     line-height: 2;
     text-align: center;
-    flex-basis: 50%;
-    max-width: 50%;
+    padding-left: 10px; /* Optional: Add padding between columns */
   }
 
+
 .question {
-    display: flex;
     flex-direction: column;
     font-size: 200%;
     margin-top: 0;
@@ -109,5 +116,5 @@ h2 {
     }
 
 .addConvoBtn:hover {
-      background-color: var(--buttonHover);
+    background-color: var(--buttonHover);
 }
