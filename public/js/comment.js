@@ -1,25 +1,37 @@
-const commentFormHandler = async function(event) {
+// Purpose: To allow users to comment on posts
+async function commentFormHandler(event) {
   event.preventDefault();
+// Get the comment text from the form
+  const comment_text = document
+    .querySelector('textarea[name="comment-body"]')
+    .value.trim();
 
-  const postId = document.querySelector('input[name="post-id"]').value;
-  const body = document.querySelector('textarea[name="comment-body"]').value;
+// Get the post id from the url
+  const post_id = window.location.toString().split("/")[
+    window.location.toString().split("/").length - 1
+  ];
 
-  if (body) {
-    await fetch('/api/comment', {
-      method: 'POST',
+// If the comment text exists, send the comment text and post id to the server
+  if (comment_text) {
+    const response = await fetch("/api/comments", {
+      method: "POST",
       body: JSON.stringify({
-        postId,
-        body
+        post_id,
+        comment_text,
       }),
       headers: {
-        'Content-Type': 'application/json'
-      }
+        "Content-Type": "application/json",
+      },
     });
 
-    document.location.reload();
+    if (response.ok) {
+      document.location.reload();
+    } else {
+      alert(response.statusText);
+    }
   }
-};
-
+}
+  
 document
-  .querySelector('#new-comment-form')
-  .addEventListener('submit', commentFormHandler);
+  .querySelector(".comment-form")
+  .addEventListener("submit", commentFormHandler);
