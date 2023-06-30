@@ -16,7 +16,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
-//Correcet file path needs to be added below
+//Correct file path needs to be added below
 //app.use(require('./controllers/'));
 
 app.use(express.json());
