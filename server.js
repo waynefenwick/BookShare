@@ -1,39 +1,39 @@
-const express = require('express');
-const path = require('path');
-const exphbs = require('express-handlebars');
-const hbs = exphbs.create({});
-const routes = require('./controllers');
-
-const sequelize = require('./config/connection');
+const path = require("path");
+const express = require("express");
+const session = require("express-session");
+const exphbs = require("express-handlebars");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Set Handlebars as the default template engine.
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+const sequelize = require("./config/connection");
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
-app.use(express.static(path.join(__dirname, 'public')));
-//Correcet file path needs to be added below
-//app.use(require('./controllers/'));
+const sess = {
+    secret: "Super secret secret",
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+        db: sequelize
+    })
+};
+
+app.use(session(sess));
+
+const helpers = require("./utils/helpers");
+const hbs = exphbs.create({ helpers });
+
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
-app.use(routes);
+app.use(express.static(path.join(__dirname, "public")));
 
-// Establish the database connection and sync sequelize models 
-sequelize
-  .authenticate()
-  .then(() => {
-    console.log('Database connection has been established successfully.');
-    return sequelize.sync({ force: false });
-  })
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`App listening on port ${PORT}!`);
-    });
-  })
-  .catch((err) => {
-    console.error('Unable to connect to the database:', err);
-  });
+app.use(require("./controllers/"));
+
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => console.log("Now listening on port " + PORT));
+});
