@@ -80,7 +80,7 @@ router.post("/", (req, res) => {
     });
 });
 //POST route that allows a user to login to their account 
-router.post('/login', (req, res) => {
+router.post('/signin', (req, res) => {
    
   User.findOne({
     where: {
@@ -110,7 +110,7 @@ router.post('/login', (req, res) => {
   });
 });
 // POST route that allows the user toi logout of their account
-router.post("/logout", (req, res) => {
+router.post("/signout", (req, res) => {
   if (req.session.loggedIn) {
    
     req.session.destroy(() => {

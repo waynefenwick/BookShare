@@ -12,12 +12,12 @@
     <i><h1 class="title">BookShare</h1></i>
     <div class="navLinks">
       <b>
-        <a href="../signin.handlebars">Sign-IN</a>
+        <a href="/signin">Sign-IN</a>
         {{#unless loggedIn}}
-        <a href="../signup.handlebars">Sign-UP</a>
+        <a href="/signup">Sign-UP</a>
         {{/unless}}
         {{#if loggedIn}}
-        <a href="../signout.handlebars">Sign-OUT</a>
+        <a href="/signout">Sign-OUT</a>
         {{/if}}
       </b>
     </div>

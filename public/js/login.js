@@ -6,7 +6,7 @@ async function loginFormHandler(event) {
   const password = document.querySelector("#password-login").value.trim();
 // If the email and password exist, send the email and password to the server 
   if (email && password) {
-    const response = await fetch("/api/users/login", {
+    const response = await fetch("/api/users/signin", {
       // Use the POST method to send the email and password to the server
       method: "post",
       body: JSON.stringify({
@@ -45,7 +45,7 @@ if (username && email && password) {
 
  
   if (response.ok) {
-    document.location.replace("/dashboard/");
+    document.location.replace("/bookshare/");
   } else {
     alert(response.statusText);
   }
