@@ -1,29 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap" rel="stylesheet">
     <title>BookShare</title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/home-style.css">
+    <link rel="stylesheet" type="text/css" href="css/home-style.css">
 </head>
 
-<body>
-  <header>
-    <nav>
-      <div class="navbar">
-        <i><h1 class="title">BookShare</h1></i>
-        <div class="navLinks">
-          <b><a href="../signin.html">Sign-IN</a>
-          <a href="../signup.html">Sign-UP</a>
-          <a href="../signout.html">Sign-OUT</a></b>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <body>
+     <nav>
+  <div class="navbar">
+    <i><h1 class="title">BookShare</h1></i>
+    <div class="navLinks">
+      <b>
+        <a href="../signin.handlebars">Sign-IN</a>
+        {{#unless loggedIn}}
+        <a href="../signup.handlebars">Sign-UP</a>
+        {{/unless}}
+        {{#if loggedIn}}
+        <a href="../signout.handlebars">Sign-OUT</a>
+        {{/if}}
+      </b>
+    </div>
+  </div>
+</nav>
+</header>
 
-  <main>
+
     <div class="container">
       <div class="column left-column">
         <p class="question">
@@ -41,17 +43,13 @@
       <div class="column right-column">
         <p class="question"><b>Current Convos</b></p>
         <h6>(Sign-IN or -UP to participate in a convo)</h6>
-        {{{body}}}
       </div>
     </div>
-  </main>
-
-  <footer class="flex-row justify-center">
-  2023: Project-2 Team
-  </footer>
-  
+      <script src="/js/logout.js"></script>
+      <script src="/js/login.js"></script>
 </body>
-<script src="/js/logout.js"></script>
-<script src="/js/login.js"></script>
+
+  
+
 </html>
 
