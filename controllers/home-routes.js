@@ -23,7 +23,7 @@ router.get("/", (req, res) => {
   })
     .then((dbPostData) => {
       const posts = dbPostData.map((post) => post.get({ plain: true }));
-      res.render("homepage", { posts, loggedIn: req.session.loggedIn });
+      res.render("home", { posts, loggedIn: req.session.loggedIn });
     })
     .catch((err) => {
       console.log(err);
@@ -69,12 +69,29 @@ router.get("/post/:id", (req, res) => {
     });
 });
 //GET route that will be used to render the login-view of the application. 
-router.get("/login", (req, res) => {
+router.get("/signup", (req, res) => {
     if (req.session.loggedIn) {
       res.redirect("/");
       return;
     }
-    res.render("login");
+    res.render("signup");
   });
+
+router.get("/signin", (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect("/");
+      return;
+    }
+    res.render("signin");
+  });
+
+router.get("/bookshare", (req, res) => {
+    res.render("bookshare");
+  });
+
+router.get("/home", (req, res) => { 
+    res.render("home");
+  });
+
 
 module.exports = router;
