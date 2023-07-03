@@ -1,3 +1,4 @@
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -5,38 +6,55 @@
     <title>BookShare</title>
     <link rel="stylesheet" type="text/css" href="css/sign-style.css">
 </head>
-
 <body>
-  <header>
-    <nav>
-      <div class="navbar">
-        <i><h1 class="title">BookShare</h1></i>
-        <div class="navLinks">
-          <b><a href="home">Home</a></b>
-          <b><a href="signin">Sign-IN</a></b>
+    <header>
+        <nav>
+            <div class="navbar">
+                <i><h1 class="title">BookShare</h1></i>
+                <div class="navLinks">
+                    <b><a href="home">Home</a></b>
+                    <b><a href="signin">Sign-IN</a></b>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div>
+                <h2>I want to start having great conversations!</h2>
+                <br>
+                <form id="signup-form">
+                    <div class="form-row">
+                        <label for="email">Email:</label>
+                        <div>
+                            <input type="email" id="email-signup" name="email" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row">
+                        <label for="username">Username:</label>
+                        <div>
+                            <input type="text" id="username-signup" name="username" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row">
+                        <label for="password">Password:</label>
+                        <div>
+                            <input type="password" id="password-signup" name="password" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-row">
+                        <input class="button" type="submit" value="Sign Up">
+                    </div>
+                </form>
+            </div>
+            <br>
         </div>
-      </div>
-    </nav>
-  </header>
+    </main>
 
-  <form class="signup-form">
-    <div>
-      <label for="username-signup">Username:</label>
-      <input type="text" id="username-signup" name="username" />
-    </div>
-    <div>
-      <label for="email-signup">Email:</label>
-      <input type="email" id="email-signup" name="email" />
-    </div>
-    <div>
-      <label for="password-signup">Password:</label>
-      <input type="password" id="password-signup" name="password" />
-    </div>
-    <div>
-      <button type="submit">Sign Up</button>
-    </div>
-  </form>
-
-  <script src="/js/login.js"></script>
+    <script src="/js/signup.js"></script>
 </body>
-</html>
+

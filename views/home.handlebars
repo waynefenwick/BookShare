@@ -7,22 +7,21 @@
 </head>
 
   <body>
-     <nav>
+    <nav>
   <div class="navbar">
     <i><h1 class="title">BookShare</h1></i>
     <div class="navLinks">
-      <b>
-        <a href="/signin">Sign-IN</a>
-        {{#unless loggedIn}}
-        <a href="/signup">Sign-UP</a>
-        {{/unless}}
-        {{#if loggedIn}}
-        <a href="/signout">Sign-OUT</a>
-        {{/if}}
-      </b>
+      {{#unless loggedIn}}
+      <a href="/signin">Sign-IN</a>
+      {{/unless}}
+      {{#if loggedIn}}
+      <a href="/bookshare">Dashboard</a>
+      <a href="/signout">Sign-OUT</a>
+      {{/if}}
     </div>
   </div>
 </nav>
+
 </header>
 
 
@@ -43,6 +42,13 @@
       <div class="column right-column">
         <p class="question"><b>Current Convos</b></p>
         <h6>(Sign-IN or -UP to participate in a convo)</h6>
+        <ol class="post-list">
+    {{#each posts as |post|}}
+  <li>
+{{> post-info post}}
+  </li>
+  {{/each}}
+</ol>
       </div>
     </div>
       <script src="/js/logout.js"></script>
@@ -51,5 +57,4 @@
 
   
 
-</html>
 
