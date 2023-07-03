@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,18 +25,18 @@
             <div>
                 <h2>I'm already having great conversations!</h2>
                 <br>
-                <form>
+                <form id="signin-form">
                     <div class="form-row">
-                      <b><label for="username">Username:</label></b>
+                      <b><label for="email">E-mail:</label></b>
                       <div>
-                        <input type="text" id="username" name="username" required>
+                        <input type="text" id="email-signin" name="email" required>
                       </div>
                     </div>
                     <br>
                     <div class="form-row">
                       <b><label for="password">Password:</label></b>
                       <div>
-                        <input type="password" id="password" name="password" required>
+                        <input type="password" id="password-signin" name="password" required>
                       </div>
                     </div>
                     <input class="button" type="submit" value="Sign In">
@@ -46,6 +45,6 @@
             <br>
     </div>
   </main>
+  <script src="/js/signin.js"></script> 
 </body>
 
-</html>

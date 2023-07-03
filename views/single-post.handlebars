@@ -1,0 +1,43 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap" rel="stylesheet">
+    <title>BookShare</title>
+    <link rel="stylesheet" type="text/css" href="../css/single-post.css">
+    <link rel="stylesheet" type="text/css" href="../css/bookshare-style.css">
+</head>
+<nav>
+  <div class="navbar">
+    <i><h1 class="title">BookShare</h1></i>
+    <div class="navLinks">
+      {{#unless loggedIn}}
+      <a href="/signin">Sign-IN</a>
+      {{/unless}}
+      {{#if loggedIn}}
+      <a href="/bookshare">Dashboard</a>
+      <a href="/signout">Sign-OUT</a>
+      {{/if}}
+    </div>
+  </div>
+</nav>
+{{> post-info post}}
+
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body" class="comment-textarea" placeholder="Add a comment"></textarea>
+  </div>
+
+  <div>
+    <button type="submit" class="comment-submit-btn">Add Comment</button>
+  </div>
+</form>
+<break>
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/js/comment.js"></script>
+{{/if}}
+</break>
