@@ -9,10 +9,16 @@
      --borderBottom: 1px solid #ccc;
 }
 
+body {
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     background-image: url("/media/background.png");
+}
+
 .formContainer {
      border: var(--outlineBorder);
      padding: 20px;
      margin: 20px;
+     background-color: var(--background);
 }
 
 .formContainer h2 {

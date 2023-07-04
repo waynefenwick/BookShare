@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap" rel="stylesheet">
-    <title>BookShare</title>
-    <link rel="stylesheet" type="text/css" href="/public/css/home-style.css">
+  <title>BookShare</title>
+  <link rel="stylesheet" type="text/css" href="../../../public/css/home-style.css">
 </head>
 
 <body>
@@ -15,9 +9,15 @@
       <div class="navbar">
         <i><h1 class="title">BookShare</h1></i>
         <div class="navLinks">
-          <b><a href="../signin.html">Sign-IN</a>
-          <a href="../signup.html">Sign-UP</a>
-          <a href="../signout.html">Sign-OUT</a></b>
+          <b>
+          {{#unless loggedIn}}
+          <a href="/signin">Sign-IN</a>
+          {{/unless}}
+          {{#if loggedIn}}
+          <a href="/bookshare">Dashboard</a>
+          <a href="/signout">Sign-OUT</a>
+          {{/if}}
+          </b>
         </div>
       </div>
     </nav>
@@ -32,26 +32,26 @@
         </p>
         <p>-----------------------</p>
         <ul>
-            <li>Find books you would love to read</li>
-            <li>Have great book convos</li>
-            <li>See what others think about books</li>
-            <li>Discuss what authors are saying</li>
+          <li>Find books you would love to read</li>
+          <li>Have great book convos</li>
+          <li>See what others think about books</li>
+          <li>Discuss what authors are saying</li>
         </ul>
       </div>
       <div class="column right-column">
         <p class="question"><b>Current Convos</b></p>
         <h6>(Sign-IN or -UP to participate in a convo)</h6>
-        {{{body}}}
+        <ol class="post-list">
+          {{#each posts as |post|}}
+            <li>
+              {{> post-info post}}
+            </li>
+          {{/each}}
+        </ol>
       </div>
     </div>
   </main>
 
-  <footer class="flex-row justify-center">
-  2023: Project-2 Team
-  </footer>
-  
-</body>
-<script src="/js/logout.js"></script>
-<script src="/js/login.js"></script>
-</html>
+<footer class="flex-row justify-center">2023: Project-2 Team</footer>
 
+</body>

@@ -13,7 +13,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
   color: var(--text);
-  background-image: url("/public/media/left_column_books.png");
+  background-image: url("/media/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

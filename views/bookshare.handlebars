@@ -1,9 +1,6 @@
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap" rel="stylesheet">
     <title>BookShare</title>
-    <link rel="stylesheet" type="text/css" href="css/bookshare-style.css">
+    <link rel="stylesheet" type="text/css" href="/css/bookshare-style.css">
 </head>
 
 <body>
@@ -12,9 +9,11 @@
             <div class="navbar">
                 <i><h1 class="title">BookShare</h1></i>
                 <div class="navLinks">
-                    <b id="signout"><a href="signout">Sign-OUT</a></b>
-                    <b><a href="home">Convo Select</a></b>
+                    <b>
+                    <a href="/home">Home</a>
+                    <b id="signout"><a href="/signout">Sign-OUT</a></b>
                     <a href="#"></a>
+                    </b>
                 </div>
             </div>
         </nav>
@@ -30,7 +29,7 @@
                             {{#each posts}}
                                 <li>
                                     <article class="post">
-                                        <div class="title">
+                                        <div class="postTitle">
                                             <h3>{{title}}</h3>
                                             <span>{{post_content}}</span>
                                         </div>
@@ -44,7 +43,7 @@
                                 </li>
                             {{/each}}
                         {{else}}
-                            <p>No posts found.</p>
+                            <p>No posts found</p>
                         {{/if}}
                     </ol>
                     <a href="new-post"><button class="addConvoBtn">Add a Convo</button></a>
