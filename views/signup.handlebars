@@ -1,19 +1,16 @@
-
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap" rel="stylesheet">
     <title>BookShare</title>
-    <link rel="stylesheet" type="text/css" href="css/sign-style.css">
+    <link rel="stylesheet" type="text/css" href="/css/sign-style.css">
 </head>
+
 <body>
     <header>
         <nav>
             <div class="navbar">
                 <i><h1 class="title">BookShare</h1></i>
                 <div class="navLinks">
-                    <b><a href="home">Home</a></b>
-                    <b><a href="signin">Sign-IN</a></b>
+                    <b><a href="/home">Home</a></b>
+                    <b><a href="/signin">Sign-IN</a></b>
                 </div>
             </div>
         </nav>
@@ -22,36 +19,26 @@
     <main>
         <div class="container">
             <div>
-                <h2>I want to start having great conversations!</h2>
+                <h2>I'm already having great conversations!</h2>
                 <br>
-                <form id="signup-form">
+                <form class="signup-form">
                     <div class="form-row">
-                        <label for="email">Email:</label>
+                        <b><label for="username">Username:</label></b>
                         <div>
-                            <input type="email" id="email-signup" name="email" required>
+                            <input type="text" id="username" name="username" required>
                         </div>
                     </div>
                     <br>
                     <div class="form-row">
-                        <label for="username">Username:</label>
+                        <b><label for="password">Password:</label></b>
                         <div>
-                            <input type="text" id="username-signup" name="username" required>
+                            <input type="password" id="password" name="password" required>
                         </div>
                     </div>
-                    <br>
-                    <div class="form-row">
-                        <label for="password">Password:</label>
-                        <div>
-                            <input type="password" id="password-signup" name="password" required>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-row">
-                        <input class="button" type="submit" value="Sign Up">
-                    </div>
+                    <input class="button" type="submit" value="Sign Up">
                 </form>
+                <br>
             </div>
-            <br>
         </div>
     </main>
 
