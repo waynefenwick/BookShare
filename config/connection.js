@@ -1,10 +1,8 @@
-const Sequelize = require('sequelize');
+// config file that will store our MySQL username, password, and database name. This file will be used by Sequelize to connect our application to the database:
+const Sequelize = require("sequelize");
 
-require('dotenv').config();
+require("dotenv").config();
 
-// Sequelize "stands between" you and your db
-// Sequelize is the key to open the door to your db
-// Sequelize serves as a "user friendly" "go-between" between you and your db
 let sequelize;
 
 if (process.env.JAWSDB_URL) {

@@ -1,0 +1,243 @@
+:root {
+  --background: rgb(228, 223, 236);
+  --navbarBackground: linear-gradient(to right, rgb(158, 160, 215), rgb(255, 170, 170), rgb(158, 160, 215));
+  --text: rgb(22, 0, 38);
+  --border: 1px solid #470b0b;
+  --button: #141846;
+  --buttonHover: #3071a9;
+  --outlineBorder: 2px solid #280606;
+  --borderBottom: 1px solid #ccc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0px;
+  color: var(--text);
+  background-image: url("/media/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .column.left-column,
+  .column.right-column {
+    flex-basis: 50%;
+  }
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  background: var(--navbarBackground);
+  width: 100%;
+  border-bottom: var(--border);
+}
+
+
+a {
+  text-decoration: none;
+  color: #333; /* Dark color that goes well with a white background */
+  font-weight: bold;
+  transition: color 0.1s;
+  margin-right: 20px; /* Add space between anchor tags*/
+}
+
+a:hover {
+  color: #9f34eb;
+}
+
+button {
+  background-color: var(--button);
+  border: 0;
+  padding: 1%;
+  color: white;
+  font-weight: bold;
+  transition: background-color .1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--buttonHover);
+}
+
+.post-list {
+  margin: 0;
+  padding: 0;
+}
+
+textarea, input {
+  padding: .5%;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+  border: 2px solid #9f34eb;;
+}
+
+textarea {
+  min-width: 40%;
+  min-height: 100px;
+}
+
+form > div {
+  margin-bottom: 2%;
+}
+
+form label {
+  display: block;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1%;
+}
+
+header h1 {
+  font-size: 1em;
+}
+
+main {
+  flex: 1;
+  padding: 2% 4%;
+}
+
+.btn-no-style {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 100%;
+  font-weight: bold;
+  transition: color .1s;
+  margin-left: 5px;
+}
+
+.btn-no-style:hover {
+  background: none;
+  color: #9f34eb;;
+}
+
+.delete-post-btn {
+  background-color: #d41414;
+}
+
+.delete-post-btn:hover {
+  background-color: #ff643d;
+}
+
+.post {
+  margin-bottom: 2%;
+  line-height: 150%;
+}
+
+.post .title span {
+  font-style: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 100%;
+  color: black;
+}
+
+.edit-link {
+  display: block;
+  margin: 3% 0 2% 0;
+}
+
+.comment-form {
+  margin-bottom: 5%;
+}
+
+.comment {
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+.comment:nth-child(odd) {
+  background-color: #fff5eb;
+}
+
+.comment .meta {
+  font-size: 90%;
+  margin-bottom: .5%;
+  opacity: .6;
+}
+
+.new-post-form input {
+  width: 300px;
+}
+
+.edit-post-form {
+  margin-bottom: 5%;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 110%;
+}
+  .form-container {
+    display: flex;
+  }
+  
+  .form-column {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .form-column form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-column form div {
+    margin-bottom: 10px;
+  }
+  
+  .left-section {
+    flex-basis: 48%;
+  }
+
+  .right-section {
+    flex-basis: 48%;
+    background: linear-gradient(to right, rgb(158, 160, 215), rgb(255, 170, 170), rgb(158, 160, 215));
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .question {
+    font-size: 20px; /* Adjust the font size as desired */
+  }
+  
+  .instruction {
+    font-size: 16px; /* Adjust the font size as desired */
+  }
+  
