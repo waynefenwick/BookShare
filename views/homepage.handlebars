@@ -1,3 +1,4 @@
+<body>
 <div class="container">
   <div class="column left-column">
     <b>You love to read?</b>
@@ -20,5 +21,13 @@
         </li>
       {{/each}}
     </ol>
+    <form id="searchForm" action="/search" method="GET">
+      <label for="searchQuery">Search for a Book:</label>
+      <input type="text" id="searchQuery" name="searchQuery">
+      <button type="submit">Search</button>
+    </form>
+     <div id="searchResults"></div>
   </div>
 </div>
+  <script src="/javascript/search.js"></script>
+<body>

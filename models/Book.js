@@ -2,31 +2,38 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 class Book extends Model { }
 
-Book.init({
-    authors: [
-        {
-            type: String,
-        },
-    ],
-    description: {
-        type: String,
-        required: true,
+Book.init(
+    {
+      authors: {
+        type: DataTypes.STRING,
+      },
+      description: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      bookId: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      image: {
+        type: DataTypes.STRING,
+      },
+      link: {
+        type: DataTypes.STRING,
+      },
+      title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
-    // saved book id from GoogleBooks
-    bookId: {
-        type: String,
-        required: true,
-    },
-    image: {
-        type: String,
-    },
-    link: {
-        type: String,
-    },
-    title: {
-        type: String,
-        required: true,
-    },
-});
+    {
+      sequelize,
+      timestamps: false,
+      freezeTableName: true,
+      underscored: true,
+      modelName: 'book',
+    }
+  );
+  
 
 module.exports = Book;
