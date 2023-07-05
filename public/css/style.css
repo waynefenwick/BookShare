@@ -9,30 +9,20 @@
   --borderBottom: 1px solid #ccc;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0px;
   color: var(--text);
+  margin: 0%;
   background-image: url("/media/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-  .container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
-
-  .column.left-column,
-  .column.right-column {
-    flex-basis: 50%;
-  }
+main {
+  flex: 1;
+  padding: 2% 2%;
+}
 
 .navbar {
   display: flex;
@@ -43,8 +33,94 @@ body {
   background: var(--navbarBackground);
   width: 100%;
   border-bottom: var(--border);
+  margin: 0;
 }
 
+.navbar .title {
+  font-size: 300%;
+  margin: 10px;
+}
+
+.intro{
+  text-align: center;
+}
+
+ul {
+  margin-left: 0;
+  padding: 0;
+}
+
+ul li {
+  line-height: 3;
+  margin-left: 70px;
+  text-align: left;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.left-column {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  flex: 1;
+  line-height: 2;
+  border-right: var(--border);
+  flex-basis: 30%;
+  max-width: 30%;
+}
+
+.left-column-login {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  flex: 1;
+  line-height: 2;
+  border-right: var(--border);
+  flex-basis: 30%;
+  max-width: 50%;
+  margin-left: 30px;
+}
+
+.right-column {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  line-height: 2;
+  text-align: center;
+  flex-basis: 50%;
+}
+
+.right-column-signup {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  flex: 1;
+  line-height: 2;
+  flex-basis: 30%;
+  max-width: 50%;
+  margin-left: 50px;
+}
+
+.instruction {
+  margin: 0;
+}
+
+.login {
+  width: 250px;
+  padding: 8px;
+  border: var(--border);
+  border-radius: 4px;
+  font-size: 14px;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+}
+
+.signup-form {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  flex: 1;
+  line-height: 2;
+  flex-basis: 30%;
+  max-width: auto;
+}
 
 a {
   text-decoration: none;
@@ -59,14 +135,14 @@ a:hover {
 }
 
 button {
+  padding: 8px 16px;
   background-color: var(--button);
-  border: 0;
-  padding: 1%;
-  color: white;
-  font-weight: bold;
-  transition: background-color .1s;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  border-radius: 5px;
+  font-size: 14px;
+  margin: 5px;
 }
 
 button:hover {
@@ -111,21 +187,8 @@ form label {
   flex-direction: column;
 }
 
-header {
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1%;
-}
-
 header h1 {
   font-size: 1em;
-}
-
-main {
-  flex: 1;
-  padding: 2% 4%;
 }
 
 .btn-no-style {
@@ -234,10 +297,11 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   .question {
-    font-size: 20px; /* Adjust the font size as desired */
+    font-size: 25px;
+    margin: 0;
   }
   
   .instruction {
-    font-size: 16px; /* Adjust the font size as desired */
+    font-size: 12px;
   }
   
