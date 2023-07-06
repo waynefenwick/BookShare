@@ -64,6 +64,28 @@ The following application allows the user to:
 
 Example of fetching from Google Book API
 
+<br>
+
+<img src="./public/images/open-api.jpg" width=900px>
+
+<br>
+
+Application templating language
+
+<br>
+
+<img src="./public/images/template-lng.jpg" width=900px>
+
+<br>
+
+Separating routes for cleaner code
+
+<br>
+
+<img src="./public/images/clear-code.jpg" width=900px>
+
+<br>
+
 ## Credits
 
 Technologies used
@@ -84,10 +106,10 @@ Technologies used
 
 ## Contributors
 
-- Wayne Fenwick [GitHub](https://github.com/waynefenwick/Project-2)
-- Arael Tijerina Jr [GitHub]({})
-- Md Mamatajur Rashed [GitHub]({})
-- Joey Sanchez [GitHub]({})
+- Wayne Fenwick [GitHub](https://github.com/waynefenwick/BookShare)
+- Arael Tijerina Jr [GitHub](https://github.com/waynefenwick/BookShare)
+- Md Mamatajur Rashed [GitHub](https://github.com/mdRashed30/BookShare)
+- Joey Sanchez [GitHub](https://github.com/waynefenwick/BookShare)
 
 ## License
 
