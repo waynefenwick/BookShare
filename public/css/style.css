@@ -279,60 +279,61 @@ footer {
   padding: 1%;
   font-size: 110%;
 }
-  .form-container {
+
+.form-container {
     display: flex;
-  }
-  
-  .form-column {
+}
+
+.form-column {
     flex: 1;
     padding: 10px;
-  }
-  
-  .form-column form {
+}
+
+.form-column form {
     display: flex;
     flex-direction: column;
-  }
-  
-  .form-column form div {
-    margin-bottom: 10px;
-  }
-  
-  .left-section {
-    flex-basis: 48%;
-  }
+}
 
-  .right-section {
+.form-column form div {
+    margin-bottom: 10px;
+}
+
+.left-section {
+    flex-basis: 48%;
+}
+
+.right-section {
     flex-basis: 48%;
     background: linear-gradient(to right, rgb(158, 160, 215), rgb(255, 170, 170), rgb(158, 160, 215));
     padding: 10px;
     border-radius: 5px;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1);
     border: var(--outlineBorder);
+}
 
-  }
-  .question {
+.question {
     font-size: 25px;
     margin: 0;
-  }
-  
-  .instruction {
+}
+
+.instruction {
     font-size: 12px;
-  }
+}
 
-  #searchResults {
+#searchResults {
     align-items: center;
-  }
+}
 
-  .book-list {
+.book-list {
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Display 2 columns */
     grid-gap: 20px; /* Add gap between book cards */
     justify-items: center; /* Center the items horizontally */
     align-items: center; /* Center the items vertically */
-  }
-  
-  .book-list li {
+}
+
+.book-list li {
     background-color: #f1f1f1;
     padding: 10px;
     border-radius: 8px;
@@ -343,20 +344,19 @@ footer {
     text-align: center;
     margin: 10px; /* Add margin to create the gap between book cards */
     border: var(--outlineBorder);
-  }
+}
 
-  .book-list li .book-cover {
+.book-list li .book-cover {
     display: flex;
     justify-content: center;
-  }
-  
-  .book-list li .book-cover img {
+}
+
+.book-list li .book-cover img {
     max-width: 20px;
     max-height: 80px;
-  }
-  
-  /* Styles for mobile devices */
+}
 
+/* Styles for mobile devices */
 @media (max-width: 767px) {
   .container {
     flex-direction: column;
@@ -367,7 +367,6 @@ footer {
 }
 
 /* Styles for tablet devices */
-
 @media (min-width: 768px) and (max-width: 1023px) {
   .container {
     flex-direction: row;
@@ -385,7 +384,6 @@ footer {
 }
 
 /* Styles for desktop devices */
-
 @media (min-width: 1024px) {
   .container {
     flex-direction: row;

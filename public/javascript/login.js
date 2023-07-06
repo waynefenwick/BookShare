@@ -15,7 +15,6 @@ async function loginFormHandler(event) {
         }),
         headers: { "Content-Type": "application/json" },
       });
-  
       // If the response is ok, redirect to the dashboard page, otherwise display the error
       if (response.ok) {
         document.location.replace("/dashboard/");
@@ -24,6 +23,7 @@ async function loginFormHandler(event) {
       }
     }
   }
+
 // Purpose: To sign up a new user
 async function signupFormHandler(event) {
   event.preventDefault();
@@ -42,8 +42,6 @@ async function signupFormHandler(event) {
       }),
       headers: { "Content-Type": "application/json" },
     });
-
-   
     if (response.ok) {
       document.location.replace("/dashboard/");
     } else {
