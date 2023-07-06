@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     searchResults.innerHTML = '';
 
     // Perform API request
-    fetch(`http://openlibrary.org/search.json?q=${searchTerm}`)
+    fetch(`https://openlibrary.org/search.json?q=${searchTerm}`)
       .then(response => response.json())
       .then(data => {
         displayResults(data);
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         const coverID = book.cover_i;
-        const coverURL = `http://covers.openlibrary.org/b/id/${coverID}-M.jpg`;
+        const coverURL = `https://covers.openlibrary.org/b/id/${coverID}-M.jpg`;
         bookCover.src = coverURL;
         bookCover.alt = book.title;
 
