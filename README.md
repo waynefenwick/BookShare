@@ -56,9 +56,9 @@ The following application allows the user to:
 - Create edit And delete the post,
 - Create personal account with name, email, and password
 
-## Gif Demo
+## Demo
 
-<img src="{}" width=900px>
+https://drive.google.com/file/d/1poJ8olvaGlNIx3XEcMdOnx7sCfuOMpEw/view
 
 ## Code Snippets
 
