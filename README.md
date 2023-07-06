@@ -8,6 +8,7 @@ BookShare is made for users that want an application where they can share their 
 
 Application is deployed through Heroku.
 
+Deployed link : https://coolbookshare-8cdf867ffeb3.herokuapp.com/
 
 ## Table of Contents
 
