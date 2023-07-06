@@ -87,15 +87,16 @@ router.put("/:id", withAuth, (req, res) => {
   Post.update(
     {
       title: req.body.title,
+      post_content: req.body.post_content
     },
     {
       where: {
-        id: req.params.id,
-      },
+        id: req.params.id
+      }
     }
   )
     .then((dbPostData) => {
-      if (!dbPostData) {
+      if (!dbPostData[0]) {
         res.status(404).json({ message: "No post found with this id" });
         return;
       }
@@ -106,6 +107,7 @@ router.put("/:id", withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
+
 
 router.delete("/:id", withAuth, (req, res) => {
   console.log("id", req.params.id);
