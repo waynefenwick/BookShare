@@ -6,7 +6,7 @@
   --button: #141846;
   --buttonHover: #3071a9;
   --outlineBorder: 2px solid #280606;
-  --borderBottom: 1px solid #ccc;
+  --borderBottom: 2px solid #ccc;
 }
 
 body {
@@ -104,7 +104,11 @@ ul li {
   margin: 0;
 }
 
-.login {
+.dashBlabel {
+  margin-bottom: 10px;
+}
+
+.input {
   width: 250px;
   padding: 8px;
   border: var(--border);
@@ -124,10 +128,15 @@ ul li {
 
 a {
   text-decoration: none;
-  color: #333; /* Dark color that goes well with a white background */
+  color: #2c00dc; /* Dark color that goes well with a white background */
   font-weight: bold;
   transition: color 0.1s;
   margin-right: 20px; /* Add space between anchor tags*/
+}
+
+.titlebtmBdr {
+  border-bottom: var(--borderBottom);
+  margin-right: 20px;
 }
 
 a:hover {
@@ -177,6 +186,7 @@ form > div {
 
 form label {
   display: block;
+  border-bottom: 10px;
 }
 
 .wrapper {
@@ -295,7 +305,9 @@ footer {
     background: linear-gradient(to right, rgb(158, 160, 215), rgb(255, 170, 170), rgb(158, 160, 215));
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1);
+    border: var(--outlineBorder);
+
   }
   .question {
     font-size: 25px;
@@ -305,24 +317,32 @@ footer {
   .instruction {
     font-size: 12px;
   }
+
+  #searchResults {
+    align-items: center;
+  }
+
   .book-list {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
   }
   
   .book-list li {
     background-color: #f1f1f1;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     flex-basis: calc(50% - 10px); /* Limit to two columns per row */
     max-width: calc(50% - 10px); /* Limit to two columns per row */
+    border: var(--outlineBorder);
+    margin: 0;
   }
   
   .book-list img {

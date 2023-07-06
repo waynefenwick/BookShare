@@ -8,7 +8,6 @@ BookShare is made for users that want an application where they can share their 
 
 Application is deployed through Heroku.
 
-Deployed link:
 
 ## Table of Contents
 

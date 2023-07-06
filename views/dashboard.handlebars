@@ -1,15 +1,15 @@
 <div class="container">
   <section class="left-section">
-    <h2>Create New Post</h2>
+    <h2 class="titlebtmBdr">Create New Convo</h2>
 
     <form class="new-post-form">
       <div>
-        <label for="post-title">Title</label>
-        <input type="text" id="post-title" name="post-title" />
+        <b><label for="post-title" class="dashBlabel">Book Title</label></b>
+        <input type="text" id="post-title" name="post-title" class="input"/>
       </div>
       <div>
-        <label for="post-content">Content</label>
-        <input id="post-content" name="post-content" />
+        <b><label for="post-content" class="dashBlabel">My Thoughts</label></b>
+        <input id="post-content" name="post-content" class="input"/>
       </div>
       <button type="submit" class="btn">Create</button>
     </form>
@@ -17,12 +17,12 @@
 
   {{#if posts.length}}
   <section class="right-section">
-    <h2>Your Posts</h2>
+    <h2>My Convos</h2>
     <ol>
       {{#each posts as |post|}}
       <li>
         {{> post-info post}}
-        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Convo</a>
       </li>
       {{/each}}
     </ol>
