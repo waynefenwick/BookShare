@@ -9,14 +9,20 @@
      --borderBottom: 1px solid #ccc;
 }
 
+body {
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     background-image: url("/media/background.png");
+}
+
 .formContainer {
      border: var(--outlineBorder);
      padding: 20px;
      margin: 20px;
+     background-color: var(--background);
 }
 
 .formContainer h2 {
-     border-bottom: var(--borderBottom);
+     border-bottom: 1px solid #ccc;
      padding-bottom: 8px;
      margin-bottom: 16px;
 }
@@ -28,7 +34,7 @@
 
 label {
      display: block;
-     margin: 8px;
+     margin-bottom: 8px;
      font-weight: bold;
 }
 
@@ -51,7 +57,7 @@ textarea {
      resize: vertical;
 }
 
-input[type="submit"] {
+input[type="submit"]{
      padding: 8px 16px;
      background-color: var(--button);
      color: #fff;
@@ -61,31 +67,16 @@ input[type="submit"] {
      font-size: 14px;
      margin: 5px;
 }
-#bookTitle {
-     height: 30px;
-     margin-bottom: 10px;
-     width: 300px
+
+input[type="submit"]:hover {
+     background-color: var(--buttonHover);
+}
+
+input[type="submit"]:focus {
+     outline: none;
 }
 
 br {
      margin-top: 8px;
      margin-bottom: 8px;
 }
-
-.deleteBtn,
-.updateBtn {
-     padding: 8px 16px;
-     background-color: var(--button);
-     color: #fff;
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
-     font-size: 14px;
-     margin: 5px;
-}
-
-.deleteBtn:hover,
-.updateBtn:hover {
-     background-color: var(--buttonHover);
-}
-
