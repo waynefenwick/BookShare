@@ -4,7 +4,7 @@
 
 ## Description
 
-Bookshare is made for users that want an application where they can share their love of reading with other people. This application is a forum-style website where the user may create login credentials using their email. Once signed in the user can start creating posts regarding any books they've read other users who are also signed up may then interact with that post and create a back and forth conversation based on that book. The user may also interact with users posts, aside from interacting with other users they may also edit/delete their own posts. There's also a book Api section dedicated for the user to find new books they may want to read and spark another conversation.
+BookShare is made for users that want an application where they can share their love of reading with other people. This application is a forum-style website where the user may create login credentials using their email. Once signed in the user can start creating posts regarding any books they've read other users who are also signed up may then interact with that post and create a back and forth conversation based on that book. The user may also interact with users posts, aside from interacting with other users they may also edit/delete their own posts. There's also a book Api section dedicated for the user to find new books they may want to read and spark another conversation.
 
 Application is deployed through Heroku.
 
@@ -64,6 +64,28 @@ The following application allows the user to:
 
 Example of fetching from Google Book API
 
+<br>
+
+<img src="./public/images/open-api.jpg" width=900px>
+
+<br>
+
+Application templating language
+
+<br>
+
+<img src="./public/images/template-lng.jpg" width=900px>
+
+<br>
+
+Separating routes for cleaner code
+
+<br>
+
+<img src="./public/images/clear-code.jpg" width=900px>
+
+<br>
+
 ## Credits
 
 Technologies used
@@ -84,10 +106,10 @@ Technologies used
 
 ## Contributors
 
-- Wayne Fenwick [GitHub](https://github.com/waynefenwick/Project-2)
-- Arael Tijerina Jr [GitHub]({})
-- Md Mamatajur Rashed [GitHub]({})
-- Joey Sanchez [GitHub]({})
+- Wayne Fenwick [GitHub](https://github.com/waynefenwick/BookShare)
+- Arael Tijerina Jr [GitHub](https://github.com/waynefenwick/BookShare)
+- Md Mamatajur Rashed [GitHub](https://github.com/mdRashed30/BookShare)
+- Joey Sanchez [GitHub](https://github.com/waynefenwick/BookShare)
 
 ## License
 
