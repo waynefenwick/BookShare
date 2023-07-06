@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   
 // Display search results
-// Display search results
 function displayResults(data) {
     const books = data.docs.filter(book => {
       return book.cover_i && book.language && book.language.includes('eng');
