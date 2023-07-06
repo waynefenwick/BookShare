@@ -8,6 +8,7 @@ BookShare is made for users that want an application where they can share their 
 
 Application is deployed through Heroku.
 
+Deployed link : https://coolbookshare-8cdf867ffeb3.herokuapp.com/
 
 ## Table of Contents
 
@@ -55,9 +56,9 @@ The following application allows the user to:
 - Create edit And delete the post,
 - Create personal account with name, email, and password
 
-## Gif Demo
+## Demo
 
-<img src="{}" width=900px>
+https://drive.google.com/file/d/1poJ8olvaGlNIx3XEcMdOnx7sCfuOMpEw/view
 
 ## Code Snippets
 

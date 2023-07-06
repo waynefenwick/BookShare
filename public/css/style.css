@@ -17,6 +17,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
 }
 
 main {
@@ -324,10 +325,11 @@ footer {
 
   .book-list {
     list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Display 2 columns */
+    grid-gap: 20px; /* Add gap between book cards */
+    justify-items: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
   }
   
   .book-list li {
@@ -339,15 +341,63 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex-basis: calc(50% - 10px); /* Limit to two columns per row */
-    max-width: calc(50% - 10px); /* Limit to two columns per row */
+    margin: 10px; /* Add margin to create the gap between book cards */
     border: var(--outlineBorder);
-    margin: 0;
+  }
+
+  .book-list li .book-cover {
+    display: flex;
+    justify-content: center;
   }
   
-  .book-list img {
-    max-width: 100px;
-    max-height: 150px;
+  .book-list li .book-cover img {
+    max-width: 20px;
+    max-height: 80px;
   }
   
-  
+  /* Styles for mobile devices */
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+  .book-list li {
+    width: 100%; /* Adjust the width to your preference */
+  }
+}
+
+/* Styles for tablet devices */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .left-column {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
+  .right-column {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Styles for desktop devices */
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .left-column {
+    flex-basis: 30%;
+    max-width: 30%;
+  }
+
+  .right-column {
+    flex-basis: 70%;
+    max-width: 70%;
+  }
+}
